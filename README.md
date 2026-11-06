@@ -31,7 +31,8 @@ QAOA sampled the optimum **29 times in 4,096 shots**. The report distinguishes t
 
 | Path | Purpose |
 |---|---|
-| [solution.py](solution.py) | Complete implementation and report generation |
+| [solution.py](solution.py) | Small entry point and console log capture |
+| [earthquake_lab/](earthquake_lab/) | Implementation organized by responsibility |
 | [verify.py](verify.py) | Five independent verification test groups |
 | [requirements.txt](requirements.txt) | Required external dependencies |
 | [results/results.pdf](results/results.pdf) | Visually checked, one-page results sheet |
@@ -41,6 +42,28 @@ QAOA sampled the optimum **29 times in 4,096 shots**. The report distinguishes t
 | [docs/audit.md](docs/audit.md) | Marking-scheme audit, derivations, and interpretation |
 
 `results/` also contains machine-readable results, QUBO coefficients, candidate predictions, all 56 selections, quantum shot counts, location probabilities, and optimizer history. Planning instructions are preserved in `docs/`.
+
+## Code organization
+
+```text
+solution.py                  # Run the experiment and capture its console output
+earthquake_lab/
+  config.py                  # Paths, reproducibility settings, references
+  data.py                    # Candidate table and exact historical generator
+  prediction.py              # Regression fitting, validation, and predictions
+  classical.py               # Greedy baseline and parallel exhaustive search
+  quantum/
+    encoding.py              # QUBO/Ising construction and encoding checks
+    circuit.py               # Statevectors, elementary gates, QASM export
+    qaoa.py                  # Bounded optimizer and sampled quantum solution
+  pipeline.py                # Connect the three methods and compare results
+  artifacts.py               # Save CSV, JSON, and circuit diagnostics
+  reporting.py               # Console output and one-page Markdown/PDF sheet
+  audit.py                   # Requirement audit and mathematical derivations
+verify.py                    # Independent verification using domain modules
+```
+
+The entry point contains no regression, search, circuit, or reporting algorithms. Multiprocessing workers live in the importable `classical` module so the spawn backend works reliably.
 
 ## Verification and limitations
 

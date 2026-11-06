@@ -17,7 +17,7 @@ Goal: choose exactly 3 of L1–L8 to maximize ML-predicted damage within 10 insp
 
 ## Keep implementation focused
 
-- One script, one saved output, one-page report, minimal dependencies.
+- One small entry point with domain modules, one saved output, one-page report, minimal dependencies.
 - Complete the classical reference early so quantum results can be checked.
 - Bound quantum optimization by evaluation count and wall-clock time. Reduce restarts or depth if needed; report settings and observed results honestly.
 - If a quantum framework is unavailable, use explicit statevector gates with NumPy rather than spending the time budget installing a large stack.
@@ -81,3 +81,7 @@ All deliverables were generated and rerun successfully. Verified 56 triples, 35 
 ## Repository layout
 
 Code remains at the repository root; generated artifacts are in `results/`; planning and audit documents are in `docs/`. The submission ZIP and Python cache were removed at the user's request.
+
+## Modular implementation
+
+`solution.py` is the small CLI entry point. Domain logic lives in `earthquake_lab/`: data, prediction, classical search, quantum encoding/circuit/QAOA, orchestration, artifact writing, reporting, and audit generation each have their own module. `verify.py` imports the domain modules directly. The modular full run and all five verification groups pass; numerical artifacts were compared against the prior committed version.

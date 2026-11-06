@@ -6,7 +6,7 @@ The original image was reread and checked against the implementation. The questi
 
 | Original requirement | Implemented evidence |
 |---|---|
-| Exact fixed-seed historical data | `solution.py: training_data()` preserves the given generator, order, seed 63 and N=120. |
+| Exact fixed-seed historical data | `earthquake_lab/data.py: training_data()` preserves the given generator, order, seed 63 and N=120. |
 | Candidate data L1-L8 | `CANDIDATES` and `TIMES` match the photograph; `candidate_predictions.csv` preserves units and predictions. |
 | Formulation (1 mark) | `results.pdf`: binary variables, maximization, exactly 3 selections, inspection time <=10 h, 56 total triples and 35 feasible. |
 | Machine learning (part of 2.5 marks) | OLS with intercept, independent 96/24 validation, final refit on all records, all eight predictions. |
@@ -15,7 +15,7 @@ The original image was reread and checked against the implementation. The questi
 | Greedy baseline | Highest three predicted damages, without silently repairing its 13-hour violation. |
 | Results table (1 mark) | Greedy, QAOA best feasible sample, QAOA modal state, and parallel exhaustive reference; locations, damage, hours, time-limit status, and measured runtime. |
 | Interpretation (0.5 mark) | Best feasible quantum sample matches the exact optimum; modal outputs are separately disclosed; two limitations and three primary references. |
-| Deliverables | `solution.py`, `requirements.txt`, `output.txt`, `results.pdf`; editable report and diagnostics are supporting files. |
+| Deliverables | `solution.py`, `earthquake_lab/`, `requirements.txt`, `output.txt`, `results.pdf`; editable report and diagnostics are supporting files. |
 
 ## Classical answer and count check
 

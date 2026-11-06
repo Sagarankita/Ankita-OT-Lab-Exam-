@@ -44,7 +44,7 @@ Features must remain ordered `[d, a, l, r]`:
 
 ## Required files
 
-- `solution.py`: runnable implementation; fixed seeds; concise explanatory comments.
+- `solution.py`: small runnable entry point. Keep the implementation modular in `earthquake_lab/`, with separate data, regression, classical search, quantum encoding/circuit/QAOA, reporting, and artifact modules. Preserve fixed seeds and concise explanatory comments.
 - `requirements.txt`: only actual external dependencies used.
 - `output.txt`: output from a successful full run, including predictions, counts, comparison, and quantum settings.
 - `results.md` and one-page `results.pdf`: formulation, all three connected domains, results table, interpretation, two limitations, references.

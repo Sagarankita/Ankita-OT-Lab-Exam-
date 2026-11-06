@@ -22,6 +22,7 @@
     3.9763144767568974,
     -0.12500782940700783
   ],
+  "ml_seconds": 0.005072584004665259,
   "feasible_count": 35,
   "optimum": {
     "indices": [
@@ -31,9 +32,9 @@
     ],
     "damage": 40.24475017567515,
     "hours": 10,
-    "worker_pid": 26891,
+    "worker_pid": 27439,
     "method": "Parallel exhaustive",
-    "seconds": 0.0776888330001384
+    "seconds": 0.07527874999505002
   },
   "comparison": [
     {
@@ -44,9 +45,9 @@
       ],
       "damage": 42.6397999923587,
       "hours": 13,
-      "worker_pid": 26887,
+      "worker_pid": 27437,
       "method": "Greedy top-3",
-      "seconds": 8.334005542565137e-06
+      "seconds": 6.834001396782696e-06
     },
     {
       "indices": [
@@ -56,13 +57,13 @@
       ],
       "damage": 40.24475017567515,
       "hours": 10,
-      "worker_pid": 26887,
+      "worker_pid": 27437,
       "state": 19,
       "count": 18,
       "slack": 0,
       "encoded_feasible": true,
       "method": "QAOA best feasible",
-      "seconds": 9.756043875000614
+      "seconds": 9.812742708003498
     },
     {
       "indices": [
@@ -72,13 +73,13 @@
       ],
       "damage": 36.43251931596264,
       "hours": 9,
-      "worker_pid": 26887,
+      "worker_pid": 27437,
       "state": 387,
       "count": 25,
       "slack": 1,
       "encoded_feasible": true,
       "method": "QAOA modal state",
-      "seconds": 9.756043875000614
+      "seconds": 9.812742708003498
     },
     {
       "indices": [
@@ -88,12 +89,11 @@
       ],
       "damage": 40.24475017567515,
       "hours": 10,
-      "worker_pid": 26891,
+      "worker_pid": 27439,
       "method": "Parallel exhaustive",
-      "seconds": 0.0776888330001384
+      "seconds": 0.07527874999505002
     }
   ],
-  "ml_seconds": 0.01631137500226032,
   "quantum": {
     "best": {
       "indices": [
@@ -103,13 +103,13 @@
       ],
       "damage": 40.24475017567515,
       "hours": 10,
-      "worker_pid": 26887,
+      "worker_pid": 27437,
       "state": 19,
       "count": 18,
       "slack": 0,
       "encoded_feasible": true,
       "method": "QAOA best feasible",
-      "seconds": 9.756043875000614
+      "seconds": 9.812742708003498
     },
     "modal_state": {
       "indices": [
@@ -119,13 +119,13 @@
       ],
       "damage": 36.43251931596264,
       "hours": 9,
-      "worker_pid": 26887,
+      "worker_pid": 27437,
       "state": 387,
       "count": 25,
       "slack": 1,
       "encoded_feasible": true,
       "method": "QAOA modal state",
-      "seconds": 9.756043875000614
+      "seconds": 9.812742708003498
     },
     "modal_selection": {
       "indices": [
@@ -134,12 +134,12 @@
       ],
       "damage": 16.977096541057563,
       "hours": 6,
-      "worker_pid": 26887
+      "worker_pid": 27437
     },
     "feasible_fraction": 0.369140625,
     "encoded_feasible_fraction": 0.12939453125,
     "feasible_probability": 0.36849965797144413,
-    "seconds": 9.756043875000614,
+    "seconds": 9.812742708003498,
     "metadata": {
       "variable_order": [
         "x1",

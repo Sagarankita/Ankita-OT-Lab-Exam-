@@ -13,7 +13,7 @@ L7       6.565723            3
 L8       10.411374            3
 
 All triples: 56; feasible triples: 35
-Parallel backend: multiprocessing.Pool, spawn, 2 workers; actual task PIDs: [26891]
+Parallel backend: multiprocessing.Pool, spawn, 2 workers; actual task PIDs: [27439, 27440]
 Running gate-based QAOA statevector simulation...
   p=1: best scaled expectation=-86.317827; feasible probability=20.58%
   p=2: best scaled expectation=-95.982157; feasible probability=21.20%
@@ -22,11 +22,11 @@ Running gate-based QAOA statevector simulation...
   p=6: best scaled expectation=-105.474784; feasible probability=36.85%
 
 METHOD                   LOCATIONS      DAMAGE      HOURS FEASIBLE RUNTIME(s)
-Greedy top-3             L1,L4,L5       42.639800    13 False    0.000008
-QAOA best feasible       L1,L2,L5       40.244750    10 True     9.756044
-QAOA modal state         L1,L2,L8       36.432519     9 True     9.756044
-Parallel exhaustive      L1,L2,L5       40.244750    10 True     0.077689
-Common ML/data preparation: 0.016311 s (excluded from solver runtimes)
+Greedy top-3             L1,L4,L5       42.639800    13 False    0.000007
+QAOA best feasible       L1,L2,L5       40.244750    10 True     9.812743
+QAOA modal state         L1,L2,L8       36.432519     9 True     9.812743
+Parallel exhaustive      L1,L2,L5       40.244750    10 True     0.075279
+Common ML/data preparation: 0.005073 s (excluded from solver runtimes)
 Quantum encoding + verification + optimization + sampling included; PDF/report I/O excluded.
 
 QAOA attempts: [
@@ -310,4 +310,4 @@ NumPy: least-squares regression https://numpy.org/doc/stable/reference/generated
 Farhi, Goldstone & Gutmann (2014), QAOA https://arxiv.org/abs/1411.4028
 Python: multiprocessing process pools https://docs.python.org/3/library/multiprocessing.html#using-a-pool-of-workers
 
-Saved results.pdf, results.md, results.json, qubo.json, circuit.qasm, candidate_predictions.csv, all_selections.csv, quantum_samples.csv, quantum_training.csv, quantum_selections.csv.
+Saved results and diagnostics in results/; requirement audit in docs/audit.md.
