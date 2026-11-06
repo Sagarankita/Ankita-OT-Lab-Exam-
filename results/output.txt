@@ -1,0 +1,313 @@
+EARTHQUAKE INSPECTION - REPRODUCIBLE RUN
+Python 3.12.14, NumPy 2.3.5; exact data seed=63; split seed=7
+Validation: 96 train / 24 test: {"mae": 0.4136829442145844, "rmse": 0.5259605587120754, "r2": 0.9631565851292349}
+All-record regression: yhat=5.129735+0.297040*d+0.080070*a+3.976314*l-0.125008*r
+Location | predicted damage | hours
+L1       14.521750            4
+L2       11.499396            2
+L3       11.338449            3
+L4       13.894445            5
+L5       14.223605            4
+L6       11.332554            3
+L7       6.565723            3
+L8       10.411374            3
+
+All triples: 56; feasible triples: 35
+Parallel backend: multiprocessing.Pool, spawn, 2 workers; actual task PIDs: [26891]
+Running gate-based QAOA statevector simulation...
+  p=1: best scaled expectation=-86.317827; feasible probability=20.58%
+  p=2: best scaled expectation=-95.982157; feasible probability=21.20%
+  p=3: best scaled expectation=-101.285023; feasible probability=29.10%
+  p=4: best scaled expectation=-103.678343; feasible probability=32.29%
+  p=6: best scaled expectation=-105.474784; feasible probability=36.85%
+
+METHOD                   LOCATIONS      DAMAGE      HOURS FEASIBLE RUNTIME(s)
+Greedy top-3             L1,L4,L5       42.639800    13 False    0.000008
+QAOA best feasible       L1,L2,L5       40.244750    10 True     9.756044
+QAOA modal state         L1,L2,L8       36.432519     9 True     9.756044
+Parallel exhaustive      L1,L2,L5       40.244750    10 True     0.077689
+Common ML/data preparation: 0.016311 s (excluded from solver runtimes)
+Quantum encoding + verification + optimization + sampling included; PDF/report I/O excluded.
+
+QAOA attempts: [
+  {
+    "depth": 1,
+    "restart": 0,
+    "parameters": [
+      0.008145147287166244,
+      -0.4465197949543064
+    ],
+    "scaled_expectation": -86.31782670352759,
+    "evaluations": 102,
+    "budget": 300,
+    "converged": true,
+    "feasible_probability": 0.20578280257474219
+  },
+  {
+    "depth": 1,
+    "restart": 1,
+    "parameters": [
+      0.00814514540666651,
+      -0.44651929810114344
+    ],
+    "scaled_expectation": -86.31782670348291,
+    "evaluations": 76,
+    "budget": 300,
+    "converged": true,
+    "feasible_probability": 0.20578303465787307
+  },
+  {
+    "depth": 1,
+    "restart": 2,
+    "parameters": [
+      0.008145146121334997,
+      -0.44651969846292394
+    ],
+    "scaled_expectation": -86.31782670353049,
+    "evaluations": 100,
+    "budget": 300,
+    "converged": true,
+    "feasible_probability": 0.20578285956201553
+  },
+  {
+    "depth": 2,
+    "restart": 0,
+    "parameters": [
+      0.005497345391041105,
+      -0.4544740869837259,
+      0.015992836746343712,
+      -0.1838626671967126
+    ],
+    "scaled_expectation": -95.98215728036212,
+    "evaluations": 196,
+    "budget": 600,
+    "converged": true,
+    "feasible_probability": 0.21199292460098598
+  },
+  {
+    "depth": 2,
+    "restart": 1,
+    "parameters": [
+      0.005497340424703488,
+      -0.4544743845317565,
+      0.0159928452263177,
+      -0.18386296320220424
+    ],
+    "scaled_expectation": -95.9821572804106,
+    "evaluations": 196,
+    "budget": 600,
+    "converged": true,
+    "feasible_probability": 0.2119928946325037
+  },
+  {
+    "depth": 2,
+    "restart": 2,
+    "parameters": [
+      0.005497342598787742,
+      -0.45447436311858136,
+      0.015992912830775016,
+      -0.18386276765813842
+    ],
+    "scaled_expectation": -95.98215728041774,
+    "evaluations": 212,
+    "budget": 600,
+    "converged": true,
+    "feasible_probability": 0.21199292519495935
+  },
+  {
+    "depth": 3,
+    "restart": 0,
+    "parameters": [
+      0.004463026311033916,
+      -0.6781322896082782,
+      0.009554597742077245,
+      -0.3302708148202226,
+      0.02668985558678521,
+      -0.13899179383107213
+    ],
+    "scaled_expectation": -101.28502320146853,
+    "evaluations": 614,
+    "budget": 900,
+    "converged": true,
+    "feasible_probability": 0.29104756960529965
+  },
+  {
+    "depth": 3,
+    "restart": 1,
+    "parameters": [
+      0.004463022349546251,
+      -0.6781323394754852,
+      0.009554607998449878,
+      -0.3302707998023647,
+      0.026689841190016633,
+      -0.138991854921531
+    ],
+    "scaled_expectation": -101.28502320150045,
+    "evaluations": 460,
+    "budget": 900,
+    "converged": true,
+    "feasible_probability": 0.29104746876846715
+  },
+  {
+    "depth": 3,
+    "restart": 2,
+    "parameters": [
+      0.004463026392281796,
+      -0.6781308412747742,
+      0.009554618247133849,
+      -0.3302702902735297,
+      0.02668993850730583,
+      -0.13899194958651384
+    ],
+    "scaled_expectation": -101.28502320141212,
+    "evaluations": 684,
+    "budget": 900,
+    "converged": true,
+    "feasible_probability": 0.29104725418288585
+  },
+  {
+    "depth": 4,
+    "restart": 0,
+    "parameters": [
+      0.003879956929836443,
+      -0.6799932914762115,
+      0.008493122017799112,
+      -0.3606870702673897,
+      0.01817043699824369,
+      -0.14278101990695402,
+      0.03698858041042393,
+      -0.07897123842615042
+    ],
+    "scaled_expectation": -103.67834326281587,
+    "evaluations": 1025,
+    "budget": 1200,
+    "converged": true,
+    "feasible_probability": 0.3228561641547683
+  },
+  {
+    "depth": 4,
+    "restart": 1,
+    "parameters": [
+      0.0038793177497857666,
+      -0.6800267327516958,
+      0.008493001597457415,
+      -0.360688941313277,
+      0.018169990461563337,
+      -0.14276317045748155,
+      0.0369878875966166,
+      -0.07898292886290188
+    ],
+    "scaled_expectation": -103.67834300400413,
+    "evaluations": 1200,
+    "budget": 1200,
+    "converged": false,
+    "feasible_probability": 0.32284834070199014
+  },
+  {
+    "depth": 4,
+    "restart": 2,
+    "parameters": [
+      0.0038799885723698885,
+      -0.6799909534029352,
+      0.008493103027677994,
+      -0.3606849312038346,
+      0.018170222864828164,
+      -0.14278045146655965,
+      0.03698783516775634,
+      -0.07897212641695742
+    ],
+    "scaled_expectation": -103.67834326123555,
+    "evaluations": 1200,
+    "budget": 1200,
+    "converged": false,
+    "feasible_probability": 0.32285587192345455
+  },
+  {
+    "depth": 6,
+    "restart": 0,
+    "parameters": [
+      0.003678559829567853,
+      -0.6733880335684173,
+      0.00789211581730381,
+      -0.3696290425337254,
+      0.0156529645053587,
+      -0.16054267981435616,
+      0.026942357921315323,
+      -0.08821805126549528,
+      0.04338933398204746,
+      -0.04111197590805799,
+      0.043712019602024366,
+      -0.03750096038386273
+    ],
+    "scaled_expectation": -105.47478367722064,
+    "evaluations": 1800,
+    "budget": 1800,
+    "converged": false,
+    "feasible_probability": 0.36849965797144457
+  },
+  {
+    "depth": 6,
+    "restart": 1,
+    "parameters": [
+      0.0029368970454909933,
+      -0.6831034478037279,
+      0.00675559838070775,
+      -0.4065281671346599,
+      0.012288396841626302,
+      -0.1623411281327461,
+      0.01797936176567748,
+      -0.09746795698694447,
+      0.029933088537269177,
+      -0.05761613112522986,
+      0.045296227291179506,
+      -0.050611108547293136
+    ],
+    "scaled_expectation": -105.40332798189388,
+    "evaluations": 1800,
+    "budget": 1800,
+    "converged": false,
+    "feasible_probability": 0.35261938294135414
+  },
+  {
+    "depth": 6,
+    "restart": 2,
+    "parameters": [
+      0.0034945049535832244,
+      -0.6524045690776085,
+      0.00669783059708997,
+      -0.37443606139602514,
+      0.012083931188068756,
+      -0.1840894248960466,
+      0.02389245109069548,
+      -0.10321575210747595,
+      0.04437601278492672,
+      -0.033441360640399743,
+      0.026170901908739216,
+      -0.036346695804291666
+    ],
+    "scaled_expectation": -105.14169131941057,
+    "evaluations": 1800,
+    "budget": 1800,
+    "converged": false,
+    "feasible_probability": 0.356315648856351
+  }
+]
+Cost scaling A=B= 94.78729523416085 ; 12 qubits; shots=4096; sample seed=2026
+Initialization seed=29; total objective evaluations= 11465
+Elementary circuit gate counts: {'h': 12, 'rz': 468, 'rx': 72, 'cx': 792} ; fidelity= 0.999999999999998
+Most frequent full bitstring (z0..z11): 110000011000
+Modal full state: L1,L2,L8 ; hours= 9 ; original feasible= True ; encoded feasible= True
+Modal measured location selection (slack marginalized): L7,L8 ; feasible= False
+Original feasible shots: 36.914062%; encoded feasible shots: 12.939453%
+Exact feasible probability: 36.849966%; optimum selection probability: 0.793332%; measured optimum fraction: 0.708008% (29/4096)
+Uniform 12-qubit reference: original feasible probability=13.671875%; unique optimum selection probability=0.390625% (all slack values marginalized)
+Best feasible sample damage gap=0.000000000 (0.000000%)
+CHECKS PASSED: all 4096 polynomial/penalty/Ising energies agree; QUBO minimum agrees with exhaustive optimum; elementary-gate and fused simulators agree; probabilities and shots normalized ; parallel equals sequential.
+No quantum speedup claimed. Single-run timings vary; process overhead dominates 56 triples.
+Two limitations: synthetic data/generalization; shallow heuristic QAOA and exponential statevector scaling.
+References:
+NumPy: least-squares regression https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html
+Farhi, Goldstone & Gutmann (2014), QAOA https://arxiv.org/abs/1411.4028
+Python: multiprocessing process pools https://docs.python.org/3/library/multiprocessing.html#using-a-pool-of-workers
+
+Saved results.pdf, results.md, results.json, qubo.json, circuit.qasm, candidate_predictions.csv, all_selections.csv, quantum_samples.csv, quantum_training.csv, quantum_selections.csv.
